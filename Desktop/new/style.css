@@ -489,7 +489,7 @@ textarea{overflow:auto;}
     td.visible-xs{display:table-cell !important;}
     .catalog-filter {height:100%;}
     .detail-photo-gallery__top-slider__item .catalog-preview__right-label-b {    margin-bottom: 132px!important;}
-    .magazine-mosaic{display:none!important;}
+    /* .magazine-mosaic{display:none!important;} */
 }
 @media (max-width:767px){.visible-xs-block{display:block !important;}
 }
@@ -2591,30 +2591,73 @@ a.pagenation__item:hover{color:#222222;}
 }
 .magazine-mosaic{margin:0 -3px 70px;}
 .magazine-mosaic:after{content:'';display:block;clear:both;}
-@media screen and (max-width:767px){.magazine-mosaic{margin-bottom:30px;}
+@media screen and (max-width:767px){
+    .magazine-mosaic {
+        margin-bottom:30px;
+        margin-top: 60px;
+    }
 }
 .magazine-mosaic__container{float:left;margin:0 0 6px;padding:0 3px;width:33.333333%;height:350px;}
 .magazine-mosaic__container.x2-horisontal{width:66.66666%;}
 .magazine-mosaic__container.x2-vertical{height:706px;float:right;}
-@media screen and (max-width:767px){.magazine-mosaic__container{width:100%!important;height:auto!important;}
+@media screen and (max-width:767px){
+    .magazine-mosaic__container{
+        width:50%!important;
+        /* height:auto!important; */
+        height:200px;
+        padding:30px;
+    }
+    .magazine-mosaic__item__title{
+        text-transform: none;
+        font-size: 30px;
+    }
+    .magazine-mosaic__item__items{
+        white-space: nowrap;
+        overflow: scroll;
+        margin-left:5px;
+        position:absolute;
+        bottom:30px;
+
+    }
+    .magazine-mosaic__item__item{
+        display: inline-block;
+        text-transform: none;
+    }
+    .magazine-mosaic__item__link__arrow{
+        display:none;
+    }
+    .magazine-mosaic__item__link{
+        border: 1px solid white;
+        border-radius: 20px;
+        padding:10px;
+        font-size:20px;
+    }
 }
 .magazine-mosaic__item{background:#d3eedc;height:100%;background-size:cover;background-position:center center;position:relative;}
 .magazine-mosaic__item:before{content:'';position:absolute;width:100%;height:100%;top:0;left:0;background:linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);opacity:0;transition:1s;}
-@media screen and (max-width:767px){.magazine-mosaic__item:before{opacity:1;}
+@media screen and (max-width:767px){
+    .magazine-mosaic__item:before{
+        opacity:1;
+    }
 }
 .magazine-mosaic__item:hover:before{opacity:1;}
 .magazine-mosaic__item__content{position:absolute;top:295px;left:29px;right:29px;color:white;transition:.5s;}
-@media screen and (max-width:767px){.magazine-mosaic__item__content{position:relative;top:auto!important;left:auto!important;right:auto!important;padding:20px;}
+@media screen and (max-width:767px){
+    .magazine-mosaic__item__content{
+        position:relative;top:auto!important;left:auto!important;right:auto!important;padding:20px;height:100%;
+    }
 }
 .magazine-mosaic__item:hover .magazine-mosaic__item__content{-webkit-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%);top:340px;}
-@media screen and (max-width:767px){.magazine-mosaic__item:hover .magazine-mosaic__item__content{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
+@media screen and (max-width:767px){
+    .magazine-mosaic__item:hover .magazine-mosaic__item__content{-webkit-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
 }
 .x2-vertical .magazine-mosaic__item__content{top:601px;}
 .x2-vertical .magazine-mosaic__item:hover .magazine-mosaic__item__content{top:536px;}
 .magazine-mosaic__item__title{font-family:'robotoregular';font-weight:normal;font-size:22px;text-transform:uppercase;letter-spacing:3px;}
 .magazine-mosaic__item__title a{color:white;text-decoration:none;display:block;}
 .magazine-mosaic__item__items{padding:21px 0 0 0;opacity:0;transition:.5s;}
-@media screen and (max-width:767px){.magazine-mosaic__item__items{opacity:1;}
+@media screen and (max-width:767px){
+    .magazine-mosaic__item__items{opacity:1;}
 }
 .magazine-mosaic__item:hover .magazine-mosaic__item__items{opacity:1;}
 .magazine-mosaic__item__item{font-family:'roboto_lightregular';font-weight:normal;font-size:14px;text-transform:uppercase;letter-spacing:1.4px;}
@@ -4555,8 +4598,10 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
 }
 
 .action_block {
-    background: url(../img/catalog-logo.png);
-    background-size: 100% 100%;
+/*     background: url(../img/catalog-logo.png); */ 
+/* 	swapt */
+	background: url("http://iris-flowers.ru/local/templates/main/img/catalog-logo.png");
+    background-size: 100% 105%;
     padding: 30px 80px;
     color:white;
     font-family: 'robotothin';
@@ -4565,19 +4610,19 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
 }
 
 .action_block .res-1 {
-    font-size: 85px;
+    font-size: 56px;
 
 }
 
 .action_block .res-2, .action_block .res-3 {
-    font-size: 30px;
-    margin-left: 7px;
+    font-size: 20px;
+/*     margin-left: 7px; */
 }
 .action_block .res-3 { position: relative;
-    top: -25px;}
-.action_block .lable_text,.action_block .lable_text_big  {float: left;}
+    top: -17px;}
+.action_block .lable_text,.action_block .lable_text_big  {float: left;} 
 .action_block .lable_text_big {
-    font-size: 140px;
+    font-size: 92px ; //swapt
     font-family: 'Times New Roman', Times, serif;
     padding: 0px 20px;
     position: relative;
@@ -4586,10 +4631,10 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
 
 .action_block .res-4 {
     background: white;
-    padding: 10px 30px;
-    font-size: 25px;
+    padding: 10px 20px;
+    font-size: 11px;
     display: inline-block;
-    margin: 10px 10px 25px 10px;
+    margin: 5px 10px 16px 10px;
     border-radius: 5px;
     color: #00bd5f;
     cursor:pointer;
@@ -4606,12 +4651,13 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
 }
 
 @media screen and (max-width:940px){
-    .lable_text_big {font-size: 100px!important;}
+    .lable_text_big {font-size: 70px!important;}
     .action_block .res-1 {
-        font-size: 65px!important;
+        font-size: 41px!important; //swapt
     }
     .action_block .res-2, .action_block .res-3 {
-        font-size: 23px!important;
+	   
+        font-size: 16px!important;
     }
     .action_block .res-3 {    top: -15px!important;}
 }
@@ -4668,7 +4714,8 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
 
 .catalog__inline > .row {
     max-width: 1180px;
-    background: url(../img/skin_catalog.jpg);
+/*     background: url(../img/skin_catalog.jpg); */
+	background: url("http://iris-flowers.ru/local/templates/main/img/skin_catalog.jpg");
     background-size: 100%;
     margin:0 auto;
     background-repeat: no-repeat;
@@ -4711,8 +4758,9 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
     .catalog__top__left__text {padding-left: 0px;}
     .catalog__inline > .row {
 
-        background-size: auto 100%;
+        background-size: 100%;
         padding-right: 20px;
+        background-position: center center;
 
     }
 
@@ -4722,6 +4770,11 @@ a.mess_phone{display:inline-block;vertical-align:top;text-align:center;color:#00
     .catalog__part__banner {margin-top: -90px;}
 }
 
+@media screen and (max-width:720px){
+    .catalog__inline > .row {
+                background-size: auto 100%;
+            }
+}
 
 
 
